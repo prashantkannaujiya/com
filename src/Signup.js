@@ -1,5 +1,5 @@
 import React from "react";
-function Signup()
+function Signup(props)
 {
     function userRegistration(ev)
     {
@@ -21,6 +21,7 @@ fetch("http://localhost:2100/Register", {
     
     .then((data) => {
       alert("Registered");
+      props.u(4);
     })
     .catch(err=>alert(err))
     ev.target.reset();

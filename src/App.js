@@ -72,6 +72,12 @@ function App() {
     setuser(null);
     setlog(false);
     setchoice(0);
+    var t=document.getElementById('logout');
+    t.style.display='none';
+  }
+  function reload(k)
+  {
+setchoice(0);
   }
   return (
     <div>
@@ -100,7 +106,7 @@ if(choice==0)
 }
 else if(choice==1)
 {
-  return <Signup></Signup>
+  return <Signup u={reload}></Signup>
 }
 else
 {
